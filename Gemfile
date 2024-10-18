@@ -67,3 +67,8 @@ group :test do
 end
 
 gem "notifications_engine", git: "https://github.com/karina-bestpeers/notifications-engine.git", branch: 'master'
+
+gem 'devise'
+gem 'rest-client'
+gem 'twilio-ruby'
+gem 'dotenv-rails', groups: [:development, :test, :production]
