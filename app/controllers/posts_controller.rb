@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @url = notifications_engine.in_app_notifications_url(host: 'localhost', port: 3000) + "?user_id=#{current_user.id}"
+    @url = notifications_engine.in_app_notifications_url(host: 'localhost', port: 3000)
     @posts = Post.all
   end
 
