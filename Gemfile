@@ -72,3 +72,5 @@ gem 'devise'
 gem 'rest-client'
 gem 'twilio-ruby'
 gem 'dotenv-rails', groups: [:development, :test, :production]
+
+gem 'sidekiq'
