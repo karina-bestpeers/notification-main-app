@@ -74,3 +74,5 @@ gem 'twilio-ruby'
 gem 'dotenv-rails', groups: [:development, :test, :production]
 
 gem 'sidekiq'
+gem 'activeadmin'
+gem 'sassc-rails'
