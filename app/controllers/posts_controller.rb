@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @url = notifications_engine.in_app_notifications_url(host: 'localhost', port: 3000)
+    @url = notifications_engine.in_app_notifications_url(host: 'localhost', port: 3000) + "?user_id=#{current_user.id}"
     @posts = Post.all
   end
 
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
-      SendNotificationService.new(@post, current_user, msg).send_notification
+      SendNotificationService.new(@post, msg).send_notification
     end
   end
 
